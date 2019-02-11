@@ -19,8 +19,6 @@ $(document).ready(function() {
   var firstTrain;
   var frequency = 0;
 
-// Begin orginal code
-
   $("#add-train").on("click", function() {
       event.preventDefault();
 
@@ -41,7 +39,6 @@ $(document).ready(function() {
     $("form")[0].reset();
   });
 
-// End orignal code
 
   database.ref().on("child_added", function(childSnapshot) {
       var nextArr;
