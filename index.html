@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Bootstrap Link -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">  
+    <!-- Firebase Link -->
+        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <!-- jQuery Link -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!-- Javascript Link -->
+        <script src="assets/javascript/app.js" type="text/javascript"></script>
+    <!-- CSS Link -->
+        <link href="assets/css/style.css" type="text/css"></script>
+    <!-- Moments Link -->
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<!-- The CSS Link didn't work, but for some reason it worked in the HTML -->
+<style>
+        .jumbotron {
+            background-color: mediumblue !important;
+        }
+
+
+        .panel {
+            color:black!important;
+        }
+
+        .btn {
+            background-color: blue !important;
+        }
+</style>
+
+<body>
+    <div class="container">
+       <div class="jumbotron text-center bg-success text-white" color="blue">
+           <h1>Train Schedule</h1>
+       </div> 
+<!-- Train Schedule Table -->
+
+       <div class="panel panel-succes text-success">
+           <div class="panel-heading"><h3>Current Train Schedule</h3></div>
+           <div class="panel-body">
+               <table class="table">
+                   <thread>
+                       <tr>
+                           <th> Train Name</th>
+                           <th> Destination</th>
+                           <th> Frequenty (min)</th>
+                           <th> Next Arrival</th>
+                           <th> Minutes Away</th>
+                       </tr>
+                   </thread>
+
+                   <!-- Train info -->
+                   <tbody id="add-row"></tbody>
+               </table>
+           </div>
+       </div>
+
+       <!-- User Train Input -->
+       <div class="panel panel-success text-success">
+           <div class="panel-heading">
+               <h3>Add Train</h3>
+           </div>
+
+           <div class="panel-body">
+               <form>
+                   <div class="form-group">
+                       <label for="text">Train Name</label>
+                       <input type="text" class="form-control" id="train-name">
+                   </div>
+
+                   <div class="form-group">
+                       <label for="text">Destination</label>
+                       <input type="text" class="form-control" id="destination">
+                   </div>
+
+                   <div class="form-group">
+                        <label for="text">First Train Time (hh:mm - Military Time)</label>
+                        <input type="text" class="form-control" id="first-train">
+                    </div>
+                                     
+                   
+                   <div class="form-group">
+                       <label for="text">Frequency (min)</label>
+                       <input type="text" class="form-control" id="frequency">
+                   </div>
+
+                   <button type="submit" id="add-train" class="btn btn-success" id="addTrain">Submit</button>
+               </form>
+           </div>
+       </div>
+
+
+    </div>
+</body>
+</html>
